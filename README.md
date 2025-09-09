@@ -1,0 +1,1 @@
+# KN_32_Rozhanska_2025
