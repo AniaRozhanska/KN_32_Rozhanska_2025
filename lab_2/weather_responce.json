@@ -1,0 +1,17 @@
+{
+    "status": "ok",
+    "httpStatus": 100,
+    "totalResults": 44,
+    "articles": [
+        {
+            "source": {
+                "id": null,
+                "weather": "YouTube"
+            },
+            "author": "IT-KAMASUTRA",
+            "title": "Weather today will be sunny",
+            "description": "Сьогодні погода буде сонячною. Не забудьте взяти сонцезахисний крем!",
+            "url": "https://www.youtube.com/watch?v=rfscVS0vtbw"
+        }
+    ]
+}
