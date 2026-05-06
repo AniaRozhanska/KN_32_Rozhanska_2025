@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "lab-7-project"
+version = "0.1.0"
+description = "Lab 7 project"
+authors = ["Anna Rozhanska"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+google-adk = {extras = ["extensions"], version = "^1.32.0"}
+python-dotenv = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
