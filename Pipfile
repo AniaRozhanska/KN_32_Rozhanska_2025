@@ -26,6 +26,8 @@ werkzeug = "==3.1.7"
 yarl = "==1.23.0"
 jikanpy-v4 = "*"
 flask = "*"
+google-adk = "*"
+python-dotenv = "*"
 
 [dev-packages]
 flake8 = "*"
