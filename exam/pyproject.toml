@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "edu-agent-project"
+version = "0.1.0"
+description = "Educational AI Agent using Google ADK"
+authors = ["AniaRozhanska <rozanskaa65@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+google-adk = "*"
+python-dotenv = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
