@@ -1,15 +1,15 @@
-def count_vowels(text: str) -> int:
-    """Рахує кількість голосних літер (українських та англійських) у рядку."""
-    if not isinstance(text, str):
-        raise TypeError("Аргумент має бути рядком")
-    
-    # Список голосних (маленькі та великі, укр. і англ.)
-    vowels = "аеєиіїоуюяaeiouyАЕЄИІЇОУЮЯAEIOUY"
-    count = 0
-    for char in text:
-        if char in vowels:
-            count += 1
-    return count
+class Figure:
+    FIGURES = ["трикутник", "квадрат", "прямокутник"]
 
-def count_symbols(text: str) -> int:
-    return len(text)
+    def __init__(self, figure_type: str, length: float):
+        if length <= 0:
+            raise ValueError("Довжина має бути більшою за нуль!")
+        if figure_type not in self.FIGURES:
+            raise ValueError(f"Невідомий тип фігури: {figure_type}")
+        
+        self.type = figure_type
+        self.length = length
+
+    @property
+    def get_figure_length(self) -> float:
+        return self.length
