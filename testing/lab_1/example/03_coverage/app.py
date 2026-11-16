@@ -16,3 +16,8 @@ class Figure:
             return 3
         else:
             return 0
+
+
+if __name__ == "__main__":  # pragma: no cover
+    fig = Figure("квадрат", 5)
+    print(f"Кількість кутів: {fig.get_angles}")

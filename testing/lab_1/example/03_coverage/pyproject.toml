@@ -1,0 +1,41 @@
+[project]
+name = "03-coverage"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "AniaRozhanska",email = "rozanskaa65@gmail.com"}
+]
+requires-python = ">=3.14"
+dependencies = [
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "coverage (>=7.17.3,<8.0.0)",
+    "pytest (>=9.2.0,<10.0.0)",
+    "pytest-cov (>=7.1.0,<8.0.0)"
+]
+
+[tool.coverage.run]
+source = ["."]
+branch = true
+
+[tool.coverage.html]
+directory = "htmlcov"
+
+[tool.coverage.report]
+skip_empty = true
+omit = [
+    "*/tests/*",
+    "test_*.py",
+    "*/.venv/*",
+]
+exclude_lines = [
+    'if __name__ == "__main__":',
+]
+fail_under = 90
