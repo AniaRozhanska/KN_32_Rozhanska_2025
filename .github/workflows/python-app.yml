@@ -1,0 +1,37 @@
+name: Lab 8 Actions
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Ім’я користувача'
+        required: true
+        default: 'Executer'
+  schedule:
+    - cron: '0 14 * * 1'
+
+jobs:
+  run_python_job:
+    name: Run Python Script
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run Python
+        run: |
+          python ./ваш_файл.py
+
+  second_job:
+    name: Second Job with Condition
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print message
+        run: echo "Second job started"
+      - name: Send greeting
+        if: github.event.inputs.name != 'Executer'
+        run: echo "Hello ${{ github.event.inputs.name }}"
