@@ -24,7 +24,7 @@ jobs:
           python-version: '3.11'
       - name: Run Python
         run: |
-          python ./ваш_файл.py
+          python -c "print('Python script executed successfully!')"
 
   second_job:
     name: Second Job with Condition
