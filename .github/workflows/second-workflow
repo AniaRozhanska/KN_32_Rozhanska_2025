@@ -1,0 +1,8 @@
+workflow.yml і вставте короткий код:
+name: Second Workflow
+on: [push]
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello from second workflow"
